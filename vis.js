@@ -105,18 +105,18 @@ const vis = {
             juros : {
 
                 // distribui os valores conforme a distribuição dos pagamentos por fonte de recursos no periodo
-                refin       : 449,//209,
-                com_outras  : 0,//197,
-                total       : 449//406
+                refin       : 556,//209 449
+                com_outras  : 0,//197
+                total       : 556//406 449
 
             },
 
             vencimentos : {
 
-                refin       :  781,
-                com_outras  :  270, 
-                total       : 1051, // 1500 - juros
-                texto       : 1500 
+                refin       :  781, //Não foi identificado
+                com_outras  :  228, // Fontes boas// antes: 270
+                total       : 812, // 1500 - juros //antes: 1051
+                texto       : 1368//antes: 1500 
 
             },
 
@@ -124,25 +124,25 @@ const vis = {
 
                 refin : {
 
-                    principal : 781,
-                    juros     : 449
+                    principal : 1062, //antes: 781
+                    juros     : 0 //antes: 449
 
                 },
 
-                vazamento : 430, // vazamento + emissoes normais
+                vazamento : 37, // vazamento + emissoes normais //antes: 430
 
-                texto: 1660
+                texto: 1062//antes: 1660
 
             },
 
             estoque : {
 
-                inicial : 5010,
-                final   : 5610
+                inicial : 5164, //antes: 5010
+                final   : 5951 //antes: 5610
 
             },
 
-            pib: 8.7e12,
+            pib: 9.9e12//antes: 8.7e12,
 
             placar : {
                 estoque:     5613655860380,
@@ -705,7 +705,6 @@ const vis = {
                              XXXXX XXXX
                 l.at._preen. XXXXXXXXXXXX X
                 linha_atual  XXXXXXXXXXXXXX
-
                 */
 
                 const deslocamento = linha_topo - ultima_linha_vazamento;
@@ -1007,29 +1006,17 @@ const vis = {
         },
 
         /*monitora_botoes : function() {
-
             const btns = document.querySelectorAll(vis.refs.buttons);
-
             btns.forEach(btn => btn.addEventListener("click", function(e) {
                 //console.log(e.target, e.target.dataset.next)
-
                 if (e.target.classList.contains('back')) {
-
                     const step = e.target.dataset.previous;
                     anims[step].reverse();
-
                 } else {
-
                     const step = e.target.dataset.next;
                     anims[step].play();
-
                 }
-
             }))
-
-
-
-
         }*/
 
     },
@@ -1160,9 +1147,7 @@ const detentores = {
         /*
         let altura_total = 0;
         detentores.dados.forEach(detentor => {
-
             altura_total += calcula_altura_bloco(detentor.valor);
-
         });*/
 
         let altura_acum = 0;
@@ -1263,12 +1248,9 @@ const detentores = {
         let virgula = target.style.transform.indexOf(',');
         let fecha_paren = target.style.transform.indexOf(')');
         let translY = parseInt(target.style.transform.substr(virgula+1, fecha_paren-virgula-3))
-
         let atual_y = top + translY;
-
         let i_ = qde_quadradinhos_visiveis - i - 1;
         let futuro_y = detentores.posicoes[i_].y;
-
         let y = futuro_y - atual_y;
         */
 
