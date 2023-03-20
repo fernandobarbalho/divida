@@ -142,7 +142,7 @@ const vis = {
 
             },
 
-            pib: 9.9e12//antes: 8.7e12,
+            pib: 9.9e12,//antes: 8.7e12,
 
             placar : {
                 estoque:     5613655860380,
